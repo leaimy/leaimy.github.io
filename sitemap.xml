@@ -2,24 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/tags/b/</loc>
-    <lastmod>2022-07-14T15:22:03+07:00</lastmod>
+    <loc>https://leaimy.github.io/</loc>
+    <lastmod>2022-07-14T15:50:38+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://example.org/</loc>
-    <lastmod>2022-07-14T15:22:03+07:00</lastmod>
+    <loc>https://leaimy.github.io/posts/</loc>
+    <lastmod>2022-07-14T15:50:38+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://example.org/tags/post/</loc>
-    <lastmod>2022-07-14T15:22:03+07:00</lastmod>
+    <loc>https://leaimy.github.io/posts/react/tong-quan/</loc>
+    <lastmod>2022-07-14T15:50:38+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://example.org/posts/</loc>
-    <lastmod>2022-07-14T15:22:03+07:00</lastmod>
+    <loc>https://leaimy.github.io/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://example.org/tags/</loc>
-    <lastmod>2022-07-14T15:22:03+07:00</lastmod>
-  </url><url>
-    <loc>http://example.org/posts/my-first-post/</loc>
-    <lastmod>2022-07-14T15:22:03+07:00</lastmod>
-  </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://leaimy.github.io/tags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

@@ -2,18 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Blog Nguyễn Thị Hà</title>
-    <link>http://example.org/posts/</link>
+    <link>https://leaimy.github.io/posts/</link>
     <description>Recent content in Posts on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 14 Jul 2022 15:22:03 +0700</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>vi-vn</language>
+    <lastBuildDate>Thu, 14 Jul 2022 15:50:38 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>tt Post</title>
-      <link>http://example.org/posts/my-first-post/</link>
-      <pubDate>Thu, 14 Jul 2022 15:22:03 +0700</pubDate>
+      <title>Tổng quan</title>
+      <link>https://leaimy.github.io/posts/react/tong-quan/</link>
+      <pubDate>Thu, 14 Jul 2022 15:50:38 +0700</pubDate>
       
-      <guid>http://example.org/posts/my-first-post/</guid>
-      <description>bai viet dau tien</description>
+      <guid>https://leaimy.github.io/posts/react/tong-quan/</guid>
+      <description> React được hiểu là một thư viện của Javascript dùng để xây dựng giao diện người dùng
+Tại sao nên học React? Độ hot (từ khoá: &amp;ldquo;the state of javascript 2019&amp;rdquo;, &amp;ldquo;google trend&amp;rdquo;) Cộng đồng lớn Được đánh giá là thân thiện với SEO trong những Lib/FW JS (SEO - Search Engine Optimization - Tối ưu hoá công cụ tìm kiếm) Khả năng mở rộng tốt, tái sử dụng cao (chia thành phần, chia component) Hiệu suất cao Phát triển nhanh chóng Khả năng tương thích ngược Tương lai sáng </description>
     </item>
     
   </channel>
