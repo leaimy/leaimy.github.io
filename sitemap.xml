@@ -3,22 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://leaimy.github.io/</loc>
-    <lastmod>2022-07-14T15:50:38+07:00</lastmod>
+    <lastmod>2022-07-14T17:43:56+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://leaimy.github.io/tags/mpa/</loc>
+    <lastmod>2022-07-14T17:43:56+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://leaimy.github.io/posts/</loc>
-    <lastmod>2022-07-14T15:50:38+07:00</lastmod>
+    <lastmod>2022-07-14T17:43:56+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://leaimy.github.io/tags/react/</loc>
-    <lastmod>2022-07-14T15:50:38+07:00</lastmod>
+    <lastmod>2022-07-14T17:43:56+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://leaimy.github.io/tags/spa/</loc>
+    <lastmod>2022-07-14T17:43:56+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://leaimy.github.io/tags/spa-mpa/</loc>
+    <lastmod>2022-07-14T17:43:56+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://leaimy.github.io/posts/react/spa-mpa/</loc>
+    <lastmod>2022-07-14T17:43:56+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://leaimy.github.io/tags/</loc>
-    <lastmod>2022-07-14T15:50:38+07:00</lastmod>
+    <lastmod>2022-07-14T17:43:56+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</loc>
+    <lastmod>2022-07-14T17:43:56+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -28,11 +53,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://leaimy.github.io/tags/t%E1%BB%95ng-quan-react/</loc>
-    <lastmod>2022-07-14T15:50:38+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</loc>
     <lastmod>2022-07-14T15:50:38+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
