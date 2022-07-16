@@ -3,26 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://leaimy.github.io/</loc>
-    <lastmod>2022-07-15T15:37:34+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://leaimy.github.io/tags/github-npmjs-unpkg/</loc>
-    <lastmod>2022-07-15T15:37:34+07:00</lastmod>
+    <lastmod>2022-07-15T20:28:57+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://leaimy.github.io/posts/</loc>
-    <lastmod>2022-07-15T15:37:34+07:00</lastmod>
+    <lastmod>2022-07-15T20:28:57+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://leaimy.github.io/tags/react/</loc>
-    <lastmod>2022-07-15T15:37:34+07:00</lastmod>
+    <lastmod>2022-07-15T20:28:57+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://leaimy.github.io/tags/</loc>
+    <lastmod>2022-07-15T20:28:57+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://leaimy.github.io/tags/t%E1%BA%A1o-ph%E1%BA%A7n-t%E1%BB%AD-trong-react/</loc>
+    <lastmod>2022-07-15T20:28:57+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://leaimy.github.io/posts/react/react-create-element/</loc>
+    <lastmod>2022-07-15T20:28:57+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</loc>
+    <lastmod>2022-07-15T20:28:57+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://leaimy.github.io/tags/github-npmjs-unpkg/</loc>
     <lastmod>2022-07-15T15:37:34+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -33,11 +48,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://leaimy.github.io/posts/react/add-react/</loc>
-    <lastmod>2022-07-15T15:37:34+07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</loc>
     <lastmod>2022-07-15T15:37:34+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

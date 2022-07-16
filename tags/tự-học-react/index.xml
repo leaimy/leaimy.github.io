@@ -6,7 +6,16 @@
     <description>Recent content in Tự học React on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Fri, 15 Jul 2022 15:37:34 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jul 2022 20:28:57 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tạo phần tử trong React</title>
+      <link>https://leaimy.github.io/posts/react/react-create-element/</link>
+      <pubDate>Fri, 15 Jul 2022 20:28:57 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/posts/react/react-create-element/</guid>
+      <description>React.createElement()</description>
+    </item>
+    
     <item>
       <title>Thêm React vào Website</title>
       <link>https://leaimy.github.io/posts/react/add-react/</link>
