@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Thêm React vào Website | Blog Nguyễn Thị Hà</title>
+    <title>Thêm React &amp; React-DOM vào Website | Blog Nguyễn Thị Hà</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Thêm React vào Website, Github, NPMJS, UNPKG">
     <meta name="generator" content="Hugo 0.101.0" />
@@ -29,19 +29,19 @@
 
     
     
-    <meta property="og:title" content="Thêm React vào Website" />
+    <meta property="og:title" content="Thêm React &amp; React-DOM vào Website" />
 <meta property="og:description" content="Thêm React vào Website, Github, NPMJS, UNPKG" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://leaimy.github.io/posts/react/add-react/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-15T15:37:34+07:00" />
 <meta property="article:modified_time" content="2022-07-15T15:37:34+07:00" />
 
-<meta itemprop="name" content="Thêm React vào Website">
+<meta itemprop="name" content="Thêm React &amp; React-DOM vào Website">
 <meta itemprop="description" content="Thêm React vào Website, Github, NPMJS, UNPKG"><meta itemprop="datePublished" content="2022-07-15T15:37:34+07:00" />
 <meta itemprop="dateModified" content="2022-07-15T15:37:34+07:00" />
-<meta itemprop="wordCount" content="179">
-<meta itemprop="keywords" content="React,Tự học React,Thêm React vào Website,Github, NPMJS, UNPKG," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thêm React vào Website"/>
+<meta itemprop="wordCount" content="218">
+<meta itemprop="keywords" content="React,Tự học React,Thêm React &amp; React-DOM vào Website,Github, NPMJS, UNPKG," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Thêm React &amp; React-DOM vào Website"/>
 <meta name="twitter:description" content="Thêm React vào Website, Github, NPMJS, UNPKG"/>
 
 	
@@ -127,7 +127,7 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Thêm React vào Website</h1>
+      <h1 class="f1 athelas mt3 mb1">Thêm React &amp; React-DOM vào Website</h1>
       
       <p class="tracked">
         By <strong>Nguyễn Thị Hà</strong>
@@ -140,8 +140,8 @@
 
       
       
-        <span class="f6 mv4 dib tracked"> - One minute read </span>
-        <span class="f6 mv4 dib tracked"> - 179 words </span>
+        <span class="f6 mv4 dib tracked"> - 2 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 218 words </span>
       
     </header>
     <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="1-github-npmjs-unpkg">1. Github, NPMJS, UNPKG</h2>
@@ -163,10 +163,12 @@
 <ul>
 <li>UNPKG có tác dụng lấy các thư viện được lưu trữ ở NPMJS dưới dạng là cdn (content delivery network - mạng lưới phân phối nội dung).</li>
 </ul>
-<h2 id="2-thêm-react-vào-website-theo-cú-pháp-cdn">2. Thêm React vào Website theo cú pháp cdn</h2>
+<h2 id="2-thêm-react--react-dom-vào-website-theo-cú-pháp-cdn">2. Thêm React &amp; React-DOM vào Website theo cú pháp cdn</h2>
 <blockquote>
-<p>Copy cái này:  <!-- raw HTML omitted --><!-- raw HTML omitted --> dán bên dưới thẻ title trong file html</p>
+<p>Copy cái này:  <code>&lt;script src=&quot;https://unpkg.com/react@18/umd/react.development.js&quot; crossorigin&gt;&lt;/script&gt;</code> dán bên dưới thẻ title trong file html để thêm React vào Website
+Sau đó copy cái này: <code>&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.development.js&quot; crossorigin&gt;&lt;/script&gt;</code> dán bên dưới cú pháp trên để thêm React-DOM vào Website</p>
 </blockquote>
+<p>Giống đoạn code phía dưới:</p>
 <pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;en&#34;&gt;
 &lt;head&gt;
@@ -175,6 +177,7 @@
     &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
     &lt;title&gt;ReactJS&lt;/title&gt;
     &lt;script src=&#34;https://unpkg.com/react@18/umd/react.development.js&#34; crossorigin&gt;&lt;/script&gt;
+    &lt;script src=&#34;https://unpkg.com/react-dom@18/umd/react-dom.development.js&#34; crossorigin&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;h1&gt;Add React to website&lt;/h1&gt;
@@ -184,7 +187,7 @@
      &lt;/body&gt;
 &lt;/html&gt;
 </code></pre><ul>
-<li>Để kiểm tra nhúng thư viện React vào trang web có thành công hay không chúng ta tiến hành gõ lệnh <em>React</em> trên cửa sổ console</li>
+<li>Để kiểm tra nhúng thư viện React và React-DOM vào trang web có thành công hay không chúng ta tiến hành gõ lệnh <em>React</em> trên cửa sổ console</li>
 </ul>
 <h2 id="3-tài-liệu-chính-thức-của-react">3. Tài liệu chính thức của React</h2>
 <blockquote>
@@ -201,7 +204,7 @@
    </li>
   
    <li class="list di">
-     <a href="/tags/th%C3%AAm-react-v%C3%A0o-website" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Thêm React vào Website</a>
+     <a href="/tags/th%C3%AAm-react-react-dom-v%C3%A0o-website" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Thêm React &amp; React-DOM vào Website</a>
    </li>
   
    <li class="list di">

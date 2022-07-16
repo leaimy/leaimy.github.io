@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Github, NPMJS, UNPKG on Blog Nguyễn Thị Hà</title>
-    <link>https://leaimy.github.io/tags/github-npmjs-unpkg/</link>
-    <description>Recent content in Github, NPMJS, UNPKG on Blog Nguyễn Thị Hà</description>
+    <title>Thêm React &amp; React-DOM vào Website on Blog Nguyễn Thị Hà</title>
+    <link>https://leaimy.github.io/tags/th%C3%AAm-react-react-dom-v%C3%A0o-website/</link>
+    <description>Recent content in Thêm React &amp; React-DOM vào Website on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Fri, 15 Jul 2022 15:37:34 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/github-npmjs-unpkg/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jul 2022 15:37:34 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/th%C3%AAm-react-react-dom-v%C3%A0o-website/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thêm React &amp; React-DOM vào Website</title>
       <link>https://leaimy.github.io/posts/react/add-react/</link>
