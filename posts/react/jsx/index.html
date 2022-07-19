@@ -39,7 +39,7 @@
 <meta itemprop="name" content="Tổng quan JSX">
 <meta itemprop="description" content="JSX là gì? Tại sao cần JSX?"><meta itemprop="datePublished" content="2022-07-18T14:18:41+07:00" />
 <meta itemprop="dateModified" content="2022-07-18T14:18:41+07:00" />
-<meta itemprop="wordCount" content="527">
+<meta itemprop="wordCount" content="663">
 <meta itemprop="keywords" content="React,Tự học React,JSX,Tổng quan JSX," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tổng quan JSX"/>
 <meta name="twitter:description" content="JSX là gì? Tại sao cần JSX?"/>
@@ -140,8 +140,8 @@
 
       
       
-        <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
-        <span class="f6 mv4 dib tracked"> - 527 words </span>
+        <span class="f6 mv4 dib tracked"> - 4 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 663 words </span>
       
     </header>
     <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><blockquote>
@@ -215,7 +215,47 @@ ReactDOM.render(ul, document.getElementById(&#39;root&#39;))
 <li>JSX không làm thay đổi ngữ nghĩa của Javascript</li>
 <li>Với cách viết gần với các thẻ HTML, nó giúp những developers thông thường (ví dụ như các designer) có thể hiểu được một cách dễ dàng, từ đó có thể viết hoặc sửa code mà không gặp nhiều khó khăn.</li>
 </ul>
-<ul class="pa0">
+<h2 id="5-giải-đáp-câu-hỏi">5. Giải đáp câu hỏi</h2>
+<ul>
+<li>Tại sao khi code thuần dùng map phải join()&hellip;?</li>
+</ul>
+<blockquote>
+<p>Dùng để chuyển mảng thành chuỗi để cho innerHTML nhận được giá trị chuỗi mà nó mong muốn</p>
+</blockquote>
+<ul>
+<li>Gặp lỗi khi render từ mảng (prop &ldquo;key&rdquo;)?</li>
+</ul>
+<blockquote>
+<p>Cách sửa lỗi:</p>
+</blockquote>
+<pre tabindex="0"><code> const ul = &lt;ul&gt; 
+            { courses.map((course, index) =&gt; &lt;li key={index}&gt;{course.name}&lt;/li&gt;)}
+            &lt;/ul&gt;
+ReactDOM.render(ul, document.getElementById(&#39;root&#39;))
+</code></pre><ul>
+<li>Không render được 2 elements cùng lúc?</li>
+</ul>
+<blockquote>
+<p>Thẻ React.Fragment là một thẻ phổ biến trong React là một thành phần trả về nhiều phần tử. Các phân đoạn cho phép bạn nhóm một danh sách con mà không cần thêm các nút bổ sung vào DOM.</p>
+</blockquote>
+<pre tabindex="0"><code>const jsx = (
+            &lt;React.Fragment&gt;
+                &lt;h1&gt;Heading 1&lt;/h1&gt;
+                &lt;h2&gt;Heading 2&lt;/h2&gt;
+            &lt;/React.Fragment&gt;
+        )
+</code></pre><blockquote>
+<p>tương đương với React.createElement() như sau:</p>
+</blockquote>
+<pre tabindex="0"><code>const jsx = React.createElement(
+            React.Fragment, 
+            null, 
+            React.createElement(&#39;h1&#39;, null, &#39;Heading 1&#39;),
+            React.createElement(&#39;h2&#39;, null, &#39;Heading 2&#39;)
+            )
+
+ReactDOM.render(jsx, document.getElementById(&#39;root&#39;))
+</code></pre><ul class="pa0">
   
    <li class="list di">
      <a href="/tags/react" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">React</a>
