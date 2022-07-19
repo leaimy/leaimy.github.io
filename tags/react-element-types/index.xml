@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JSX on Blog Nguyễn Thị Hà</title>
-    <link>https://leaimy.github.io/tags/jsx/</link>
-    <description>Recent content in JSX on Blog Nguyễn Thị Hà</description>
+    <title>React Element Types on Blog Nguyễn Thị Hà</title>
+    <link>https://leaimy.github.io/tags/react-element-types/</link>
+    <description>Recent content in React Element Types on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Tue, 19 Jul 2022 10:06:40 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/jsx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 10:06:40 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/react-element-types/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>React Element Types</title>
       <link>https://leaimy.github.io/posts/react/react-element-types/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://leaimy.github.io/posts/react/react-element-types/</guid>
       <description>Tìm hiểu cách tạo ra React components thông qua việc hiểu bản chất đó là sử dụng React.createElement với type là function/class.</description>
-    </item>
-    
-    <item>
-      <title>Tổng quan JSX</title>
-      <link>https://leaimy.github.io/posts/react/jsx/</link>
-      <pubDate>Mon, 18 Jul 2022 14:18:41 +0700</pubDate>
-      
-      <guid>https://leaimy.github.io/posts/react/jsx/</guid>
-      <description>JSX là gì? Tại sao cần JSX?</description>
     </item>
     
   </channel>
