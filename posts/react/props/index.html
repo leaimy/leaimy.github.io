@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>React Element Types | Blog Nguyễn Thị Hà</title>
+    <title>Props | Blog Nguyễn Thị Hà</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Tìm hiểu cách tạo ra React components thông qua việc hiểu bản chất đó là sử dụng React.createElement với type là function/class.">
+    <meta name="description" content="Props là gì? Dùng props khi nào?">
     <meta name="generator" content="Hugo 0.101.0" />
     
     
@@ -29,20 +29,20 @@
 
     
     
-    <meta property="og:title" content="React Element Types" />
-<meta property="og:description" content="Tìm hiểu cách tạo ra React components thông qua việc hiểu bản chất đó là sử dụng React.createElement với type là function/class." />
+    <meta property="og:title" content="Props" />
+<meta property="og:description" content="Props là gì? Dùng props khi nào?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://leaimy.github.io/posts/react/react-element-types/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-07-19T10:06:40+07:00" />
-<meta property="article:modified_time" content="2022-07-19T10:06:40+07:00" />
+<meta property="og:url" content="https://leaimy.github.io/posts/react/props/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-19T20:46:11+07:00" />
+<meta property="article:modified_time" content="2022-07-19T20:46:11+07:00" />
 
-<meta itemprop="name" content="React Element Types">
-<meta itemprop="description" content="Tìm hiểu cách tạo ra React components thông qua việc hiểu bản chất đó là sử dụng React.createElement với type là function/class."><meta itemprop="datePublished" content="2022-07-19T10:06:40+07:00" />
-<meta itemprop="dateModified" content="2022-07-19T10:06:40+07:00" />
-<meta itemprop="wordCount" content="311">
-<meta itemprop="keywords" content="React,Tự học React,JSX,Component,React Element Types," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="React Element Types"/>
-<meta name="twitter:description" content="Tìm hiểu cách tạo ra React components thông qua việc hiểu bản chất đó là sử dụng React.createElement với type là function/class."/>
+<meta itemprop="name" content="Props">
+<meta itemprop="description" content="Props là gì? Dùng props khi nào?"><meta itemprop="datePublished" content="2022-07-19T20:46:11+07:00" />
+<meta itemprop="dateModified" content="2022-07-19T20:46:11+07:00" />
+<meta itemprop="wordCount" content="299">
+<meta itemprop="keywords" content="React,Tự học React,JSX,Props," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Props"/>
+<meta name="twitter:description" content="Props là gì? Dùng props khi nào?"/>
 
 	
   </head>
@@ -127,7 +127,7 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">React Element Types</h1>
+      <h1 class="f1 athelas mt3 mb1">Props</h1>
       
       <p class="tracked">
         By <strong>Nguyễn Thị Hà</strong>
@@ -135,54 +135,45 @@
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2022-07-19T10:06:40+07:00">July 19, 2022</time>
+      <time class="f6 mv4 dib tracked" datetime="2022-07-19T20:46:11+07:00">July 19, 2022</time>
       
 
       
       
         <span class="f6 mv4 dib tracked"> - 2 minutes read </span>
-        <span class="f6 mv4 dib tracked"> - 311 words </span>
+        <span class="f6 mv4 dib tracked"> - 299 words </span>
       
     </header>
-    <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><blockquote>
-<p>Tại sao phải chia component?</p>
-<blockquote>
-<p>Khi chia component hợp lý sẽ giúp dự án có cấu trúc rõ ràng, có tính kế thừa, các component chỉ cần viết 1 lần và có thể dùng ở nhiều chỗ.</p>
-</blockquote>
-</blockquote>
-<h2 id="1-giới-thiệu-về-component">1. Giới thiệu về Component</h2>
+    <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="1-props-là-gì-dùng-props-khi-nào">1. Props là gì? Dùng props khi nào?</h2>
 <ul>
-<li>Components cho phép bạn chia UI thành các phần độc lập, có thể tái sử dụng, và hoàn toàn tách biệt nhau.</li>
-<li>Chúng nhận vào bất kì đầu vào nào (còn được gọi là “props”) và trả về các React elements mô tả những gì sẽ xuất hiện trên màn hình.</li>
+<li>Props là một dữ liệu mà được truyền từ thằng Component cha xuống cho Component con</li>
+<li>Props không thể nào tự động thay đổi trong component hiện tại</li>
+<li>Nếu như muốn thay đổi Props, bắt buộc phải có sự thay đổi từ Component cha (do cha truyển xuống), chính điều này sẽ giúp chúng ta tạo ra sự đa dạng cho Component</li>
 </ul>
-<h2 id="2-function-components">2. Function Components</h2>
-<p>Cách đơn giản nhất để định nghĩa một component đó là viết một hàm JavaScript:</p>
-<pre tabindex="0"><code>function Header() {
-        return &lt;div className=&#34;header&#34;&gt;Header&lt;/div&gt;
-    }
-</code></pre><p>Hàm này là một React component trả về một React element. Chúng ta gọi các components này là &ldquo;function components&rdquo; vì chúng là các hàm Javascript theo đúng nghĩa đen.</p>
-<p>Render một component:</p>
-<pre tabindex="0"><code>const app = &lt;Header /&gt;
-</code></pre><h2 id="3-class-components">3. Class Components</h2>
-<p>Bạn cũng có thể sử dụng ES6 class để định nghĩa một component:</p>
-<pre tabindex="0"><code>class Content extends React.Component {
-        render() {
-            return  &lt;div className=&#34;content&#34;&gt;Content&lt;/div&gt;
-        }
-    }
-</code></pre><p>Render một component:</p>
-<pre tabindex="0"><code>const app = &lt;Content /&gt;
-</code></pre><p>Class component và Function component là tương đương nhau dưới góc độ của React.</p>
-<h2 id="3-tạo-component">3. Tạo component</h2>
-<p>Các components có thể tham chiếu đến các components khác tại đầu ra của chúng.</p>
-<p>Ví dụ, chúng ta có thể tạo ra <code>App</code> component mà nó sẽ render ra <code>PostItem</code> nhiều lần:</p>
-<pre tabindex="0"><code>function PostItem() {
+<h2 id="2-props-trong-react-elements">2. Props trong React elements</h2>
+<ul>
+<li>Sử dụng props giống như với atribute của thẻ HTML</li>
+<li>Hai props class, for được chuyển thành className, htmlFor</li>
+<li>Phải tuân theo quy ước có sẵn.</li>
+</ul>
+<h2 id="3-props--trong-react-components">3. Props  trong React components</h2>
+<ul>
+<li>Sử dụng props giống như đối số cho Component</li>
+<li>Tự do đặt tên props
+<ul>
+<li>Đặt theo camelCase</li>
+<li>Có thể bao gồm dấu gạch ngang</li>
+</ul>
+</li>
+</ul>
+<p>Ví dụ minh hoạ Props:</p>
+<pre tabindex="0"><code>function PostItem(props) {
     return (
-            &lt;div class=&#34;post-item&#34;&gt;
-                &lt;img src=&#34;https://files.fullstack.edu.vn/f8-prod/blog_posts/311/6147eea9cef9c.png&#34; alt=&#34;&#34; /&gt;
-                &lt;h2 class=&#34;post-title&#34;&gt;C#(.NET) - Tương tác với file Excel&lt;/h2&gt;
-                &lt;p class=&#34;post-desc&#34;&gt;Tiến hành đọc file dữ liệu =&gt; phân tích dữ liệu =&gt; Xuất ra file Excel theo mẫu cho sẵn.&lt;/p&gt;
-                &lt;p class=&#34;post-published&#34;&gt;10 tháng trước&lt;/p&gt;
+            &lt;div className=&#34;post-item&#34;&gt;
+                &lt;img src={props.image} alt={props.title} /&gt;
+                &lt;h2 className=&#34;post-title&#34;&gt;{props.title}&lt;/h2&gt;
+                &lt;p className=&#34;post-desc&#34;&gt;{props.description}&lt;/p&gt;
+                &lt;p className=&#34;post-published&#34;&gt;{props.publishedAt}&lt;/p&gt;
             &lt;/div&gt;    
     )
 }
@@ -191,18 +182,38 @@
 function App(){
     return (
     &lt;div class=&#34;posts-list&#34;&gt;
-        &lt;PostItem /&gt;
-        &lt;PostItem /&gt;
-        &lt;PostItem /&gt;
-        &lt;PostItem /&gt;
-        &lt;PostItem /&gt;
+        &lt;PostItem
+            title=&#34;C#(.NET) - Tương tác với file Excel&#34;
+            image=&#34;https://files.fullstack.edu.vn/f8-prod/blog_posts/311/6147eea9cef9c.png&#34;
+            description=&#34;Tiến hành đọc file dữ liệu =&gt; phân tích dữ liệu =&gt; Xuất ra file Excel theo mẫu cho sẵn.&#34;
+            publishedAt=&#34;10 tháng trước&#34;
+        /&gt;
+        &lt;PostItem 
+            title=&#34;C#(.NET) - Tương tác với file Excel&#34;
+            image=&#34;https://files.fullstack.edu.vn/f8-prod/blog_posts/311/6147eea9cef9c.png&#34;
+            description=&#34;Tiến hành đọc file dữ liệu =&gt; phân tích dữ liệu =&gt; Xuất ra file Excel theo mẫu cho sẵn.&#34;
+            publishedAt=&#34;10 tháng trước&#34;
+        /&gt;
+        &lt;PostItem 
+            title=&#34;C#(.NET) - Tương tác với file Excel&#34;
+            image=&#34;https://files.fullstack.edu.vn/f8-prod/blog_posts/311/6147eea9cef9c.png&#34;
+            description=&#34;Tiến hành đọc file dữ liệu =&gt; phân tích dữ liệu =&gt; Xuất ra file Excel theo mẫu cho sẵn.&#34;
+            publishedAt=&#34;10 tháng trước&#34;
+        /&gt;
+      
     &lt;/div&gt;
 )
 }
 
 
 ReactDOM.render(&lt;App /&gt;, document.getElementById(&#39;root&#39;))
-</code></pre><ul class="pa0">
+</code></pre><h2 id="4-một-số-lưu-ý">4. Một số lưu ý</h2>
+<ul>
+<li>Prop &ldquo;key&rdquo; là props đặc biệt</li>
+<li>Props cơ bản là đối số của Component =&gt; Props có thể là bất cứ kiểu dữ liệu gì</li>
+<li>Sử dụng destructuring</li>
+</ul>
+<ul class="pa0">
   
    <li class="list di">
      <a href="/tags/react" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">React</a>
@@ -217,11 +228,7 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById(&#39;root&#39;))
    </li>
   
    <li class="list di">
-     <a href="/tags/component" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Component</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/react-element-types" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">React Element Types</a>
+     <a href="/tags/props" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Props</a>
    </li>
   
 </ul>
@@ -240,6 +247,10 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById(&#39;root&#39;))
     <p class="f5 b mb3">Related</p>
     <ul class="pa0 list">
 	   
+	     <li  class="mb2">
+          <a href="/posts/react/react-element-types/">React Element Types</a>
+        </li>
+	    
 	     <li  class="mb2">
           <a href="/posts/react/jsx/">Tổng quan JSX</a>
         </li>

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Tue, 19 Jul 2022 10:06:40 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 20:46:11 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Props</title>
+      <link>https://leaimy.github.io/posts/react/props/</link>
+      <pubDate>Tue, 19 Jul 2022 20:46:11 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/posts/react/props/</guid>
+      <description>Props là gì? Dùng props khi nào?</description>
+    </item>
+    
     <item>
       <title>React Element Types</title>
       <link>https://leaimy.github.io/posts/react/react-element-types/</link>

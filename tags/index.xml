@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Tue, 19 Jul 2022 10:06:40 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 20:46:11 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSX</title>
+      <link>https://leaimy.github.io/tags/jsx/</link>
+      <pubDate>Tue, 19 Jul 2022 20:46:11 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/tags/jsx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Props</title>
+      <link>https://leaimy.github.io/tags/props/</link>
+      <pubDate>Tue, 19 Jul 2022 20:46:11 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/tags/props/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://leaimy.github.io/tags/react/</link>
+      <pubDate>Tue, 19 Jul 2022 20:46:11 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tự học React</title>
+      <link>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</link>
+      <pubDate>Tue, 19 Jul 2022 20:46:11 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Component</title>
       <link>https://leaimy.github.io/tags/component/</link>
@@ -17,38 +53,11 @@
     </item>
     
     <item>
-      <title>JSX</title>
-      <link>https://leaimy.github.io/tags/jsx/</link>
-      <pubDate>Tue, 19 Jul 2022 10:06:40 +0700</pubDate>
-      
-      <guid>https://leaimy.github.io/tags/jsx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React</title>
-      <link>https://leaimy.github.io/tags/react/</link>
-      <pubDate>Tue, 19 Jul 2022 10:06:40 +0700</pubDate>
-      
-      <guid>https://leaimy.github.io/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>React Element Types</title>
       <link>https://leaimy.github.io/tags/react-element-types/</link>
       <pubDate>Tue, 19 Jul 2022 10:06:40 +0700</pubDate>
       
       <guid>https://leaimy.github.io/tags/react-element-types/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tự học React</title>
-      <link>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</link>
-      <pubDate>Tue, 19 Jul 2022 10:06:40 +0700</pubDate>
-      
-      <guid>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</guid>
       <description></description>
     </item>
     
