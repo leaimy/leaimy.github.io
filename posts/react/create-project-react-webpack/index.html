@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NodeJS | Blog Nguyễn Thị Hà</title>
+    <title>Tạo dự án với React &#43; Webpack | Blog Nguyễn Thị Hà</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="NodeJS là gì? Tại sao phải sử dụng NodeJS? Cài đặt môi trường NodeJS.">
+    <meta name="description" content="Cách sử dụng Webpack để tạo một dự án làm việc với ReactJS">
     <meta name="generator" content="Hugo 0.101.0" />
     
     
@@ -29,20 +29,20 @@
 
     
     
-    <meta property="og:title" content="NodeJS" />
-<meta property="og:description" content="NodeJS là gì? Tại sao phải sử dụng NodeJS? Cài đặt môi trường NodeJS." />
+    <meta property="og:title" content="Tạo dự án với React &#43; Webpack" />
+<meta property="og:description" content="Cách sử dụng Webpack để tạo một dự án làm việc với ReactJS" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://leaimy.github.io/posts/react/caidatnodejs/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-07-21T14:58:21+07:00" />
-<meta property="article:modified_time" content="2022-07-21T14:58:21+07:00" />
+<meta property="og:url" content="https://leaimy.github.io/posts/react/create-project-react-webpack/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-21T16:08:42+07:00" />
+<meta property="article:modified_time" content="2022-07-21T16:08:42+07:00" />
 
-<meta itemprop="name" content="NodeJS">
-<meta itemprop="description" content="NodeJS là gì? Tại sao phải sử dụng NodeJS? Cài đặt môi trường NodeJS."><meta itemprop="datePublished" content="2022-07-21T14:58:21+07:00" />
-<meta itemprop="dateModified" content="2022-07-21T14:58:21+07:00" />
-<meta itemprop="wordCount" content="303">
-<meta itemprop="keywords" content="React,Tự học React,Create React App,NodeJS," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="NodeJS"/>
-<meta name="twitter:description" content="NodeJS là gì? Tại sao phải sử dụng NodeJS? Cài đặt môi trường NodeJS."/>
+<meta itemprop="name" content="Tạo dự án với React &#43; Webpack">
+<meta itemprop="description" content="Cách sử dụng Webpack để tạo một dự án làm việc với ReactJS"><meta itemprop="datePublished" content="2022-07-21T16:08:42+07:00" />
+<meta itemprop="dateModified" content="2022-07-21T16:08:42+07:00" />
+<meta itemprop="wordCount" content="520">
+<meta itemprop="keywords" content="React,Tự học React,Create React App,Tạo dự án với React &#43; Webpack," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tạo dự án với React &#43; Webpack"/>
+<meta name="twitter:description" content="Cách sử dụng Webpack để tạo một dự án làm việc với ReactJS"/>
 
 	
   </head>
@@ -127,7 +127,7 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">NodeJS</h1>
+      <h1 class="f1 athelas mt3 mb1">Tạo dự án với React &#43; Webpack</h1>
       
       <p class="tracked">
         By <strong>Nguyễn Thị Hà</strong>
@@ -135,44 +135,86 @@
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2022-07-21T14:58:21+07:00">July 21, 2022</time>
+      <time class="f6 mv4 dib tracked" datetime="2022-07-21T16:08:42+07:00">July 21, 2022</time>
       
 
       
       
-        <span class="f6 mv4 dib tracked"> - 2 minutes read </span>
-        <span class="f6 mv4 dib tracked"> - 303 words </span>
+        <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 520 words </span>
       
     </header>
-    <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="1-nodejs-là-gì">1. NodeJS là gì?</h2>
+    <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="1-tìm-hiểu-webpack">1. Tìm hiểu Webpack</h2>
+<blockquote>
+<p>Truy cập vào trang: <a href="https://webpack.js.org/">https://webpack.js.org/</a>   chúng ta sẽ thấy cái hình bên dưới:</p>
+</blockquote>
+<p><img src="/images/webpack.png" alt="Webpack"></p>
 <ul>
-<li>NodeJS là một Javascript runtime.</li>
-<li>Khi cài NodeJS sẽ tạo ra môi trường độc lập để có thể thực thi code Javascript.</li>
-<li>Để NodeJS có thể chạy được Javascript thì bên trong nó, nó sử dụng Chrome&rsquo;s V8 JavaScript engine được phát triển bởi Google.</li>
-</ul>
-<h2 id="2-tại-sao-phải-sử-dụng-nodejs">2. Tại sao phải sử dụng NodeJS?</h2>
+<li>Webpack giúp chúng ta module hoá gần hết các file làm việc với Front-end như các file js, css, image&hellip;</li>
+<li>Đơn giản import, export các file có đuôi mở rộng như .js, .css, .jpg, .png&hellip;</li>
+<li>Một số ưu điểm khi dùng webpack:</li>
+<li>Giúp cho project dễ dàng phát triển, quản lý, customize
 <ul>
-<li>NodeJS giúp bật lên một web server mà không cần dùng đến live server nữa.</li>
-<li>NodeJS sẽ giải quyết được một số vấn đề lặp đi lặp lại code, khi cài NodeJS nó sẽ tự động cài quản lý thư viện npm mà npm có đầy đủ thư viện liên quan đến dự án React vậy nên không cần phải thêm react, reactdom, bable&hellip; trong từng dữ án nữa, mỗi dự án chỉ cần install và import rồi dùng thôi.</li>
-</ul>
-<h2 id="3-cài-đặt-môi-trường-nodejs">3. Cài đặt môi trường NodeJS</h2>
-<p>Cài trên máy Windown:</p>
-<ul>
-<li>Bước 1: Tắt VSCode</li>
-<li>Bước 2: Mở trình duyệt gõ từ khoá &ldquo;NodeJS&rdquo;, sau đó vào trang nodejs.org, nếu thấy nút downloads thì click vào luôn.</li>
-<li>Bước 3: Tải bản Windows Installer (.msi), tuỳ vào hệ điều hành là 32 bit hay là 64 bit</li>
-<li>Bước 4: Sau khi tải về được tập tin cài đặt. Bạn hãy tiến hành cài đặt theo từng bước.</li>
-<li>Bước 5: Đọc và chấp nhận các yêu cầu của NodeJS về bản quyền</li>
-<li>Bước 6: Trong các bước tiếp theo thực hiện lần lượt theo hướng dẫn gợi ý mặc định của chương trình cài đặt.</li>
-<li>Bước 7: Sau khi đã thiết lập, chương trình được cài đặt vào máy tính. Trong bước cuối cùng nhấn Finish để hoàn thành bước cài đặt.</li>
-<li>Bước 8: Kiểm tra phiên bản, mở terminal ra rồi gõ các lệnh sau nếu ra số phiên bản thì thành công:
-<ul>
-<li>node -v</li>
-<li>npm -v</li>
-<li>npx -v</li>
+<li>Tăng tốc độ cho project</li>
+<li>Phân chia các module và chỉ load khi cần</li>
+<li>Đóng gói tất cả file nguồn thành một file duy nhất, nhờ vào loader mà có thể biên dịch các loại file khác nhau</li>
+<li>Biến các tài nguyễn tĩnh (image, css) trở thành 1 module</li>
+<li>Chuyển đổi các mã nguồn: JSX, less, sass, scss thành js,&hellip; ES6-&gt;ES5 thông qua babel transpiler&hellip;</li>
 </ul>
 </li>
 </ul>
+<h2 id="2-tạo-dự-án-với-react--webpack">2. Tạo dự án với React + Webpack</h2>
+<h4 id="cấu-trúc-dự-án">Cấu trúc dự án</h4>
+<pre tabindex="0"><code>react-webpack # thư mục gốc
+    | src # thư mục chứa source code chính
+        | components # thư mục chứa components
+        | index.js # File khởi tạo, render App vào #root
+    | public
+        | index.html # HTML page, nơi chứa #root element
+</code></pre><h4 id="khởi-tạo-dự-án">Khởi tạo dự án</h4>
+<ul>
+<li>Bước 1: Trong hướn dẫn này chúng ta sử dụng VSCode IDE. Mở VSCode rồi chọn File -&gt; Add Folder to Workspace.
+<img src="/images/b1.png" alt="Buoc1"></li>
+<li>Bước 2: Tiếp theo, bạn tự tạo một thư mục mới tên là react-webpack sau đó chọn thư mục đó và click vào Add.
+<img src="/images/b2.png" alt="Buoc2"></li>
+</ul>
+<h4 id="mở-cửa-sổ-terminal">Mở cửa sổ Terminal</h4>
+<p><img src="/images/b3.png" alt="Buoc3"></p>
+<p>Sau đó chạy dòng lệnh sau để khởi tạo dự án với Node:</p>
+<pre tabindex="0"><code>npm init
+</code></pre><blockquote>
+<p>Gõ <code>npm init</code> vào Terminal sau đó nhấn phím Enter để chạy dòng lệnh.</p>
+</blockquote>
+<p>Kết quả trông như sau:</p>
+<p><img src="/images/b4.png" alt="Buoc4"></p>
+<p>Khi đó trong Terminal của bạn sẽ yêu cầu nhập một số thông tin để mô tả cho dự án của bạn. Bạn có thể nhập thông tin vào nếu muốn, trong hướng dẫn này mình để mặc định nên Enter hết.</p>
+<p><img src="/images/b5.png" alt="Buoc5"></p>
+<p>Sau khi khởi tạo dự án thành công bạn sẽ thấy file package.json được tạo trong thư mục dự án.</p>
+<p><img src="/images/b6.png" alt="Buoc6"></p>
+<blockquote>
+<p>package.json là file chứa thông tin dự án như: tên dự án, phiên bản, mô tả, các thư viện được sử dụng trong dự án, v.v</p>
+</blockquote>
+<h4 id="cài-đặt-webpack">Cài đặt webpack</h4>
+<p>Chạy lệnh sau để cài đặt 2 thư viện là webpack và webpack-cli:</p>
+<pre tabindex="0"><code>npm install webpack webpack-cli --save-dev
+</code></pre><blockquote>
+<p><code>--save-dev</code> để đánh dấu 2 thư viện này chỉ dùng trong khi phát triển, khi dự án đẩy lên production sẽ không có các thư viện này.</p>
+</blockquote>
+<p>Sau khi lệnh trên chạy xong, <code>webpack</code> và <code>webpack-cli</code> sẽ được thêm vào <code>devDependencies</code>:</p>
+<p><img src="/images/b7.png" alt="Buoc7"></p>
+<blockquote>
+<p><code>devDependencies</code> chứa các thư viện được cài đặt với flag <code>--save-dev</code>.</p>
+</blockquote>
+<h4 id="cài-đặt-react-và-react-dom">Cài đặt React và React-DOM</h4>
+<p>Chạy lệnh sau:</p>
+<pre tabindex="0"><code>npm install react@17.0.2 react-dom@17.0.2 --save
+</code></pre><blockquote>
+<p><code>--save</code> để thêm các thư viện được cài vào phần <code>dependencies</code> trong <code>package.json</code>. Đây là các thư viện được sử dụng trong dự án, bao gồm cả development &amp; production. Từ phiên bản NPM 5 trở đi thì <code>--save</code> được thêm vào mặc định, nếu bạn đang sử dụng NPM &gt;= 5 thì có thể không cần <code>--save</code>.</p>
+</blockquote>
+<p>Sau khi cài đặt thành công:</p>
+<p><img src="/images/b8.png" alt="Buoc8"></p>
+<h2 id="3-tài-liệu-tham-khảo">3. Tài liệu tham khảo</h2>
+<p><a href="https://fullstack.edu.vn/blog/phan-1-tao-du-an-reactjs-voi-webpack-va-babel.html">https://fullstack.edu.vn/blog/phan-1-tao-du-an-reactjs-voi-webpack-va-babel.html</a></p>
 <ul class="pa0">
   
    <li class="list di">
@@ -188,7 +230,7 @@
    </li>
   
    <li class="list di">
-     <a href="/tags/nodejs" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">NodeJS</a>
+     <a href="/tags/t%E1%BA%A1o-d%E1%BB%B1-%C3%A1n-v%E1%BB%9Bi-react-&#43;-webpack" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Tạo dự án với React &#43; Webpack</a>
    </li>
   
 </ul>
@@ -207,6 +249,10 @@
     <p class="f5 b mb3">Related</p>
     <ul class="pa0 list">
 	   
+	     <li  class="mb2">
+          <a href="/posts/react/caidatnodejs/">NodeJS</a>
+        </li>
+	    
 	     <li  class="mb2">
           <a href="/posts/react/props/">Props</a>
         </li>
