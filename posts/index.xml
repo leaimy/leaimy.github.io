@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Tue, 19 Jul 2022 20:46:11 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Jul 2022 14:58:21 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NodeJS</title>
+      <link>https://leaimy.github.io/posts/react/caidatnodejs/</link>
+      <pubDate>Thu, 21 Jul 2022 14:58:21 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/posts/react/caidatnodejs/</guid>
+      <description>NodeJS là gì? Tại sao phải sử dụng NodeJS? Cài đặt môi trường NodeJS.</description>
+    </item>
+    
     <item>
       <title>Props</title>
       <link>https://leaimy.github.io/posts/react/props/</link>

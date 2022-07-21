@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>React Element Types | Blog Nguyễn Thị Hà</title>
+    <title>NodeJS | Blog Nguyễn Thị Hà</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Tìm hiểu cách tạo ra React components thông qua việc hiểu bản chất đó là sử dụng React.createElement với type là function/class.">
+    <meta name="description" content="NodeJS là gì? Tại sao phải sử dụng NodeJS? Cài đặt môi trường NodeJS.">
     <meta name="generator" content="Hugo 0.101.0" />
     
     
@@ -29,20 +29,20 @@
 
     
     
-    <meta property="og:title" content="React Element Types" />
-<meta property="og:description" content="Tìm hiểu cách tạo ra React components thông qua việc hiểu bản chất đó là sử dụng React.createElement với type là function/class." />
+    <meta property="og:title" content="NodeJS" />
+<meta property="og:description" content="NodeJS là gì? Tại sao phải sử dụng NodeJS? Cài đặt môi trường NodeJS." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://leaimy.github.io/posts/react/react-element-types/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-07-19T10:06:40+07:00" />
-<meta property="article:modified_time" content="2022-07-19T10:06:40+07:00" />
+<meta property="og:url" content="https://leaimy.github.io/posts/react/caidatnodejs/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-21T14:58:21+07:00" />
+<meta property="article:modified_time" content="2022-07-21T14:58:21+07:00" />
 
-<meta itemprop="name" content="React Element Types">
-<meta itemprop="description" content="Tìm hiểu cách tạo ra React components thông qua việc hiểu bản chất đó là sử dụng React.createElement với type là function/class."><meta itemprop="datePublished" content="2022-07-19T10:06:40+07:00" />
-<meta itemprop="dateModified" content="2022-07-19T10:06:40+07:00" />
-<meta itemprop="wordCount" content="311">
-<meta itemprop="keywords" content="React,Tự học React,JSX,Component,React Element Types," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="React Element Types"/>
-<meta name="twitter:description" content="Tìm hiểu cách tạo ra React components thông qua việc hiểu bản chất đó là sử dụng React.createElement với type là function/class."/>
+<meta itemprop="name" content="NodeJS">
+<meta itemprop="description" content="NodeJS là gì? Tại sao phải sử dụng NodeJS? Cài đặt môi trường NodeJS."><meta itemprop="datePublished" content="2022-07-21T14:58:21+07:00" />
+<meta itemprop="dateModified" content="2022-07-21T14:58:21+07:00" />
+<meta itemprop="wordCount" content="301">
+<meta itemprop="keywords" content="React,Tự học React,Create React App,NodeJS," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NodeJS"/>
+<meta name="twitter:description" content="NodeJS là gì? Tại sao phải sử dụng NodeJS? Cài đặt môi trường NodeJS."/>
 
 	
   </head>
@@ -127,7 +127,7 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">React Element Types</h1>
+      <h1 class="f1 athelas mt3 mb1">NodeJS</h1>
       
       <p class="tracked">
         By <strong>Nguyễn Thị Hà</strong>
@@ -135,74 +135,45 @@
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2022-07-19T10:06:40+07:00">July 19, 2022</time>
+      <time class="f6 mv4 dib tracked" datetime="2022-07-21T14:58:21+07:00">July 21, 2022</time>
       
 
       
       
         <span class="f6 mv4 dib tracked"> - 2 minutes read </span>
-        <span class="f6 mv4 dib tracked"> - 311 words </span>
+        <span class="f6 mv4 dib tracked"> - 301 words </span>
       
     </header>
-    <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><blockquote>
-<p>Tại sao phải chia component?</p>
-<blockquote>
-<p>Khi chia component hợp lý sẽ giúp dự án có cấu trúc rõ ràng, có tính kế thừa, các component chỉ cần viết 1 lần và có thể dùng ở nhiều chỗ.</p>
-</blockquote>
-</blockquote>
-<h2 id="1-giới-thiệu-về-component">1. Giới thiệu về Component</h2>
+    <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="1-nodejs-là-gì">1. NodeJS là gì?</h2>
 <ul>
-<li>Components cho phép bạn chia UI thành các phần độc lập, có thể tái sử dụng, và hoàn toàn tách biệt nhau.</li>
-<li>Chúng nhận vào bất kì đầu vào nào (còn được gọi là “props”) và trả về các React elements mô tả những gì sẽ xuất hiện trên màn hình.</li>
+<li>NodeJS là một Javascript runtime.</li>
+<li>Khi cài NodeJS sẽ tạo ra môi trường độc lập để có thể thực thi code Javascript.</li>
+<li>Để NodeJS có thể chạy được Javascript thì bên trong nó, nó sử dụng Chrome&rsquo;s V8 JavaScript engine được phát triển bởi Google.</li>
 </ul>
-<h2 id="2-function-components">2. Function Components</h2>
-<p>Cách đơn giản nhất để định nghĩa một component đó là viết một hàm JavaScript:</p>
-<pre tabindex="0"><code>function Header() {
-        return &lt;div className=&#34;header&#34;&gt;Header&lt;/div&gt;
-    }
-</code></pre><p>Hàm này là một React component trả về một React element. Chúng ta gọi các components này là &ldquo;function components&rdquo; vì chúng là các hàm Javascript theo đúng nghĩa đen.</p>
-<p>Render một component:</p>
-<pre tabindex="0"><code>const app = &lt;Header /&gt;
-</code></pre><h2 id="3-class-components">3. Class Components</h2>
-<p>Bạn cũng có thể sử dụng ES6 class để định nghĩa một component:</p>
-<pre tabindex="0"><code>class Content extends React.Component {
-        render() {
-            return  &lt;div className=&#34;content&#34;&gt;Content&lt;/div&gt;
-        }
-    }
-</code></pre><p>Render một component:</p>
-<pre tabindex="0"><code>const app = &lt;Content /&gt;
-</code></pre><p>Class component và Function component là tương đương nhau dưới góc độ của React.</p>
-<h2 id="4-tạo-component">4. Tạo component</h2>
-<p>Các components có thể tham chiếu đến các components khác tại đầu ra của chúng.</p>
-<p>Ví dụ, chúng ta có thể tạo ra <code>App</code> component mà nó sẽ render ra <code>PostItem</code> nhiều lần:</p>
-<pre tabindex="0"><code>function PostItem() {
-    return (
-            &lt;div class=&#34;post-item&#34;&gt;
-                &lt;img src=&#34;https://files.fullstack.edu.vn/f8-prod/blog_posts/311/6147eea9cef9c.png&#34; alt=&#34;&#34; /&gt;
-                &lt;h2 class=&#34;post-title&#34;&gt;C#(.NET) - Tương tác với file Excel&lt;/h2&gt;
-                &lt;p class=&#34;post-desc&#34;&gt;Tiến hành đọc file dữ liệu =&gt; phân tích dữ liệu =&gt; Xuất ra file Excel theo mẫu cho sẵn.&lt;/p&gt;
-                &lt;p class=&#34;post-published&#34;&gt;10 tháng trước&lt;/p&gt;
-            &lt;/div&gt;    
-    )
-}
-
-
-function App(){
-    return (
-    &lt;div class=&#34;posts-list&#34;&gt;
-        &lt;PostItem /&gt;
-        &lt;PostItem /&gt;
-        &lt;PostItem /&gt;
-        &lt;PostItem /&gt;
-        &lt;PostItem /&gt;
-    &lt;/div&gt;
-)
-}
-
-
-ReactDOM.render(&lt;App /&gt;, document.getElementById(&#39;root&#39;))
-</code></pre><ul class="pa0">
+<h2 id="2-tại-sao-phải-sử-dụng-nodejs">2. Tại sao phải sử dụng NodeJS?</h2>
+<ul>
+<li>NodeJS giúp bật lên một web server mà không cần dùng đến live server nữa.</li>
+<li>NodeJS sẽ giải quyết được một số vấn đề lặp đi lặp lại code, khi cài NodeJS nó sẽ tự động cài quản lý thư viện npm mà npm có đầy đủ thư viện liên quan đến dự án React vậy nên không cần phải thêm react, reactdom, bable&hellip; trong từng dữ án nữa, mỗi dự án chỉ cần import rồi dùng thôi.</li>
+</ul>
+<h2 id="3-cài-đặt-môi-trường-nodejs">3. Cài đặt môi trường NodeJS</h2>
+<p>Cài trên máy Windown:</p>
+<ul>
+<li>Bước 1: Tắt VSCode</li>
+<li>Bước 2: Mở trình duyệt gõ từ khoá &ldquo;NodeJS&rdquo;, sau đó vào trang nodejs.org, nếu thấy nút downloads thì click vào luôn.</li>
+<li>Bước 3: Tải bản Windows Installer (.msi), tuỳ vào hệ điều hành là 32 bit hay là 64 bit</li>
+<li>Bước 4: Sau khi tải về được tập tin cài đặt. Bạn hãy tiến hành cài đặt theo từng bước.</li>
+<li>Bước 5: Đọc và chấp nhận các yêu cầu của NodeJS về bản quyền</li>
+<li>Bước 6: Trong các bước tiếp theo thực hiện lần lượt theo hướng dẫn gợi ý mặc định của chương trình cài đặt.</li>
+<li>Bước 7: Sau khi đã thiết lập, chương trình được cài đặt vào máy tính. Trong bước cuối cùng nhấn Finish để hoàn thành bước cài đặt.</li>
+<li>Bước 8: Kiểm tra phiên bản, mở terminal ra rồi gõ các lệnh sau nếu ra số phiên bản thì thành công:
+<ul>
+<li>node -v</li>
+<li>npm -v</li>
+<li>npx -v</li>
+</ul>
+</li>
+</ul>
+<ul class="pa0">
   
    <li class="list di">
      <a href="/tags/react" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">React</a>
@@ -213,15 +184,11 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById(&#39;root&#39;))
    </li>
   
    <li class="list di">
-     <a href="/tags/jsx" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">JSX</a>
+     <a href="/tags/create-react-app" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Create React App</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/component" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Component</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/react-element-types" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">React Element Types</a>
+     <a href="/tags/nodejs" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">NodeJS</a>
    </li>
   
 </ul>
@@ -240,6 +207,14 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById(&#39;root&#39;))
     <p class="f5 b mb3">Related</p>
     <ul class="pa0 list">
 	   
+	     <li  class="mb2">
+          <a href="/posts/react/props/">Props</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/react-element-types/">React Element Types</a>
+        </li>
+	    
 	     <li  class="mb2">
           <a href="/posts/react/jsx/">Tổng quan JSX</a>
         </li>
