@@ -39,7 +39,7 @@
 <meta itemprop="name" content="Tạo dự án với React &#43; Webpack">
 <meta itemprop="description" content="Cách sử dụng Webpack để tạo một dự án làm việc với ReactJS"><meta itemprop="datePublished" content="2022-07-21T16:08:42+07:00" />
 <meta itemprop="dateModified" content="2022-07-21T16:08:42+07:00" />
-<meta itemprop="wordCount" content="520">
+<meta itemprop="wordCount" content="1404">
 <meta itemprop="keywords" content="React,Tự học React,Create React App,Tạo dự án với React &#43; Webpack," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tạo dự án với React &#43; Webpack"/>
 <meta name="twitter:description" content="Cách sử dụng Webpack để tạo một dự án làm việc với ReactJS"/>
@@ -140,8 +140,8 @@
 
       
       
-        <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
-        <span class="f6 mv4 dib tracked"> - 520 words </span>
+        <span class="f6 mv4 dib tracked"> - 7 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 1404 words </span>
       
     </header>
     <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="1-tìm-hiểu-webpack">1. Tìm hiểu Webpack</h2>
@@ -213,6 +213,149 @@
 </blockquote>
 <p>Sau khi cài đặt thành công:</p>
 <p><img src="/images/b8.png" alt="Buoc8"></p>
+<h4 id="cài-đặt-babel">Cài đặt Babel</h4>
+<p>Chạy lệnh sau:</p>
+<pre tabindex="0"><code>npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+</code></pre><ul>
+<li>babel-core: Chuyển đổi ES6 về ES5</li>
+<li>babel-loader: Cho phép chuyển các files Javascript sử dụng Babel &amp; Webpack</li>
+<li>babel-preset-env: Cài đặt sẵn giúp bạn sử dụng Javascript mới nhất trên nhiều môi trường khác nhau (nhiều trình duyệt khác nhau). Gói này đơn giản là support chuyển đổi ES6, ES7, ES8, ES… về ES5.</li>
+<li>babel-preset-react: Hỗ trợ chuyển đổi JSX về Javascript</li>
+</ul>
+<p>Sau khi cài đặt xong:</p>
+<p><img src="/images/b9.png" alt="Buoc9"></p>
+<h4 id="tạo-indexhtml">Tạo index.html</h4>
+<p>Tại thư mục gốc của dự án hãy tạo file public/index.html và thêm vào cấu trúc HTML mặc định như sau:</p>
+<p><img src="/images/b10.png" alt="Buoc10"></p>
+<blockquote>
+<p>Thêm nhanh cấu trúc HTML mặc định với VSCode, gõ ! và nhấn Tab.</p>
+</blockquote>
+<p>Tiếp theo, hãy tạo #root element:</p>
+<p><img src="/images/b11.png" alt="Buoc11"></p>
+<h4 id="tạo-file-indexjs">Tạo file index.js</h4>
+<p>Tại thư mục gốc của dự án hãy tạo file src/index.js và thêm vào nội dung sau:</p>
+<pre tabindex="0"><code>import React from &#39;react&#39; // nạp thư viện react
+import ReactDOM from &#39;react-dom&#39; // nạp thư viện react-dom
+
+// Tạo component App
+function App() {
+    return (
+        &lt;div&gt;
+            &lt;h1&gt;Xin chào mọi người!!!&lt;/h1&gt;
+        &lt;/div&gt;
+    )
+}
+
+// Render component App vào #root element
+ReactDOM.render(&lt;App /&gt;, document.getElementById(&#39;root&#39;))
+</code></pre><h2 id="3-cấu-hình-webpack">3. Cấu hình webpack</h2>
+<h4 id="cài-đặt-css-loader-và-style-loader">Cài đặt CSS-Loader và Style-Loader</h4>
+<p>2 thư viện này giúp webpack có thể tải file .css dưới dạng module.</p>
+<p>Chạy:</p>
+<pre tabindex="0"><code>npm install css-loader style-loader --save-dev
+</code></pre><h4 id="tạo-webpackconfigjs">Tạo webpack.config.js</h4>
+<p>Tạo file webpack.config.js tại thư mục gốc của dự án với nội dung sau:</p>
+<pre tabindex="0"><code>const path = require(&#34;path&#34;);
+
+module.exports = {
+  entry: &#34;./src/index.js&#34;, // Dẫn tới file index.js ta đã tạo
+  output: {
+    path: path.join(__dirname, &#34;/build&#34;), // Thư mục chứa file được build ra
+    filename: &#34;bundle.js&#34; // Tên file được build ra
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/, // Sẽ sử dụng babel-loader cho những file .js
+        exclude: /node_modules/, // Loại trừ thư mục node_modules
+        use: [&#34;babel-loader&#34;]
+      },
+      {
+        test: /\.css$/, // Sử dụng style-loader, css-loader cho file .css
+        use: [&#34;style-loader&#34;, &#34;css-loader&#34;]
+      }
+    ]
+  },
+  // Chứa các plugins sẽ cài đặt trong tương lai
+  plugins: [
+  ]
+};
+</code></pre><p>Anh em lưu ý đặt file <code>webpack.config.js</code> ở thư mục gốc, ngang hàng với <code>package.json</code> nhé:</p>
+<p><img src="/images/b12.png" alt="Buoc12"></p>
+<h4 id="tạo-file-babelrc">Tạo file .babelrc</h4>
+<p>File .babelrc dùng để cấu hình cho thư viện Babel.</p>
+<blockquote>
+<p>Lưu ý tên file bắt đầu bằng dấu .</p>
+</blockquote>
+<p>Tại thư mục gốc dự án tạo file <code>.babelrc</code> và thêm nội dung sau:</p>
+<pre tabindex="0"><code>{
+    &#34;presets&#34;: [
+        &#34;@babel/preset-env&#34;,
+        &#34;@babel/preset-react&#34;
+    ]
+}
+</code></pre><blockquote>
+<p>Cài đặt này để cho Babel biết sử dụng preset-env và preset-react trong việc hỗ trợ chuyển đổi mã.</p>
+</blockquote>
+<p>Đây là ảnh chụp file đã tạo:</p>
+<p><img src="/images/b13.png" alt="Buoc13"></p>
+<h4 id="thêm-scripts-cho-dự-án">Thêm scripts cho dự án</h4>
+<p>Tại package.json thêm nội dung sau:</p>
+<pre tabindex="0"><code>&#34;scripts&#34;: {
+    ...
+    &#34;start&#34;: &#34;webpack --mode development --watch&#34;,
+    &#34;build&#34;: &#34;webpack --mode production&#34;
+}
+</code></pre><p>Làm đúng thì trông nó sẽ như thế này:
+<img src="/images/b14.png" alt="Buoc14"></p>
+<blockquote>
+<p>Cấu hình <code>scripts</code> này để bạn có thể chạy lệnh tương ứng qua Terminal. Ví dụ: <code>npm start</code> sẽ chạy lệnh ở phần <code>start</code>, <code>npm run build</code> sẽ chạy lệnh ở phần <code>build</code>. Trừ <code>start</code> ra thì bạn cần thêm từ <code>run</code> nữa nhé.</p>
+</blockquote>
+<h2 id="4-chạy-dự-án">4. Chạy dự án</h2>
+<h4 id="biên-dịch-code-với-webpack">Biên dịch code với Webpack</h4>
+<p>Tại Terminal hãy chạy:</p>
+<pre tabindex="0"><code>npm start
+</code></pre><blockquote>
+<p>Lệnh này sẽ chạy <code>webpack --mode development --watch</code> mà ta đã cấu hình trong package.json, &ndash;watch để webpack sẽ luôn lắng nghe thay đổi, khi file thay đổi webpack sẽ thực hiện biên dịch nhé.</p>
+</blockquote>
+<p>Kết quả trông như sau:</p>
+<ul>
+<li>Có file mới được tạo ra trong build/bundle.js (vì ta đã cấu hình như vậy trong <code>webpack.config.js</code>)</li>
+<li>Nội dung trong <code>build/bundle.js</code> chính là code của file src/index.js đã được Babel chuyển đổi, bạn có thể mở ra để quan sát.</li>
+</ul>
+<p>Mọi người sẽ thấy có rất nhiều code trong này vì nó bao gồm cả code của những thư viện chúng ta đã import như: react và react-dom.</p>
+<h4 id="chạy-dự-án-với-live-server-vscode">Chạy dự án với Live Server (VSCode)</h4>
+<p>Phần này chúng ta làm 2 việc:</p>
+<ul>
+<li>Thêm thẻ script link tới file build/bundle.js</li>
+<li>Chạy dự án với Live Server</li>
+</ul>
+<p>Thêm nội dung sau vào vị trí như ảnh mô tả ở trên:</p>
+<pre tabindex="0"><code>&lt;script src=&#34;../build/bundle.js&#34;&gt;&lt;/script&gt;
+</code></pre><p>Sau đó chạy Live Server và đạt được kết quả như sau là đã làm đúng:</p>
+<p>Tiếp theo sẽ test xem webpack có đang lắng nghe thay đổi file không nhé (vì trong start chúng ta có sử dụng cờ &ndash;watch mà).</p>
+<blockquote>
+<p>Lưu ý không được tắt Terminal. Chạy dự án theo cách này phải luôn giữ cho Terminal chạy:</p>
+</blockquote>
+<p>Thử đi sửa nội dung file src/index.js:</p>
+<p>Nội dung website trên trình duyệt cũng thay đổi theo:</p>
+<blockquote>
+<p>Nhờ Live Server mà ta không cần F5 trang web</p>
+</blockquote>
+<p>Tới đây hình dung flow chạy nó như này:</p>
+<ol>
+<li>Webpack khi được chạy sẽ lắng nghe thay đổi của file</li>
+<li>Khi file thay đổi Webpack sẽ biên dịch và update vào build/bundle.js</li>
+<li>Website được chạy sẽ link file script từ build/bssundle.js</li>
+<li>Live Server chạy web và lắng nghe thay đổi của build/bundle.js để F5 lại trang.</li>
+</ol>
+<h2 id="5-cài-đặt-html-webpack-plugin">5. Cài đặt html-webpack-plugin</h2>
+<p>Tại sao phải cài thằng này làm gì? Ở phần trước chúng ta phải tự đi thêm thằng này vào index.html</p>
+<p>Làm như này khá thủ công, chúng ta có thể tự động hoá nó vì rõ ràng ta đã mất công cấu hình trong Webpack rồi mà.</p>
+<p>Chỗ này này:</p>
+<p>Chính vì vậy html-webpack-plugin ra đời để giúp chúng ta &ldquo;nhờ&rdquo; Webpack sau khi build ra build/bundle.js thì thêm hộ chúng ta vào public/ index.html luôn.</p>
+<p>Cài đặt:</p>
+<p>npmin</p>
 <h2 id="3-tài-liệu-tham-khảo">3. Tài liệu tham khảo</h2>
 <p><a href="https://fullstack.edu.vn/blog/phan-1-tao-du-an-reactjs-voi-webpack-va-babel.html">https://fullstack.edu.vn/blog/phan-1-tao-du-an-reactjs-voi-webpack-va-babel.html</a></p>
 <ul class="pa0">
