@@ -6,7 +6,25 @@
     <description>Recent content in Posts on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Thu, 21 Jul 2022 16:08:42 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Aug 2022 08:11:33 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>useState hook</title>
+      <link>https://leaimy.github.io/posts/react/usestate-hook/</link>
+      <pubDate>Mon, 22 Aug 2022 08:11:33 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/posts/react/usestate-hook/</guid>
+      <description>Tìm hiểu về useState hook</description>
+    </item>
+    
+    <item>
+      <title>NPM, NPX và YARN</title>
+      <link>https://leaimy.github.io/posts/react/npm-npx-yarn/</link>
+      <pubDate>Mon, 22 Aug 2022 07:48:20 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/posts/react/npm-npx-yarn/</guid>
+      <description>NPM, NPX và YARN là gì?</description>
+    </item>
+    
     <item>
       <title>Tạo dự án với React &#43; Webpack</title>
       <link>https://leaimy.github.io/posts/react/create-project-react-webpack/</link>
