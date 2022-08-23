@@ -39,7 +39,7 @@
 <meta itemprop="name" content="useEffect Hook">
 <meta itemprop="description" content="Tìm hiểu useEffect Hook"><meta itemprop="datePublished" content="2022-08-23T07:52:58+07:00" />
 <meta itemprop="dateModified" content="2022-08-23T07:52:58+07:00" />
-<meta itemprop="wordCount" content="675">
+<meta itemprop="wordCount" content="685">
 <meta itemprop="keywords" content="useEffect Hook,Hook,React,Tự học React," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="useEffect Hook"/>
 <meta name="twitter:description" content="Tìm hiểu useEffect Hook"/>
@@ -141,7 +141,7 @@
       
       
         <span class="f6 mv4 dib tracked"> - 4 minutes read </span>
-        <span class="f6 mv4 dib tracked"> - 675 words </span>
+        <span class="f6 mv4 dib tracked"> - 685 words </span>
       
     </header>
     <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><blockquote>
@@ -399,7 +399,8 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">useEffect</span>(() =&gt; {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> () =&gt; {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">avatar</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">revokeObjectURL</span>(<span style="color:#a6e22e">avatar</span>.<span style="color:#a6e22e">preview</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// Tránh việc ảnh bị rò rỉ ra bên ngoài
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">avatar</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">revokeObjectURL</span>(<span style="color:#a6e22e">avatar</span>.<span style="color:#a6e22e">preview</span>);
 </span></span><span style="display:flex;"><span>    };
 </span></span><span style="display:flex;"><span>  }, [<span style="color:#a6e22e">avatar</span>]);
 </span></span><span style="display:flex;"><span>
