@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Mon, 22 Aug 2022 08:11:33 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 07:52:58 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hook</title>
       <link>https://leaimy.github.io/tags/hook/</link>
-      <pubDate>Mon, 22 Aug 2022 08:11:33 +0700</pubDate>
+      <pubDate>Tue, 23 Aug 2022 07:52:58 +0700</pubDate>
       
       <guid>https://leaimy.github.io/tags/hook/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>React</title>
       <link>https://leaimy.github.io/tags/react/</link>
-      <pubDate>Mon, 22 Aug 2022 08:11:33 +0700</pubDate>
+      <pubDate>Tue, 23 Aug 2022 07:52:58 +0700</pubDate>
       
       <guid>https://leaimy.github.io/tags/react/</guid>
       <description></description>
@@ -28,16 +28,34 @@
     <item>
       <title>Tự học React</title>
       <link>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</link>
-      <pubDate>Mon, 22 Aug 2022 08:11:33 +0700</pubDate>
+      <pubDate>Tue, 23 Aug 2022 07:52:58 +0700</pubDate>
       
       <guid>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>useEffect Hook</title>
+      <link>https://leaimy.github.io/tags/useeffect-hook/</link>
+      <pubDate>Tue, 23 Aug 2022 07:52:58 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/tags/useeffect-hook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tow-way binding</title>
+      <link>https://leaimy.github.io/tags/tow-way-binding/</link>
+      <pubDate>Mon, 22 Aug 2022 10:49:03 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/tags/tow-way-binding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>useState hook</title>
       <link>https://leaimy.github.io/tags/usestate-hook/</link>
-      <pubDate>Mon, 22 Aug 2022 08:11:33 +0700</pubDate>
+      <pubDate>Mon, 22 Aug 2022 10:49:03 +0700</pubDate>
       
       <guid>https://leaimy.github.io/tags/usestate-hook/</guid>
       <description></description>

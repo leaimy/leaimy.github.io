@@ -6,7 +6,16 @@
     <description>Recent content in useState hook on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Mon, 22 Aug 2022 08:11:33 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/usestate-hook/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Aug 2022 10:49:03 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/usestate-hook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Two-way Binding</title>
+      <link>https://leaimy.github.io/posts/react/two-way-binding/</link>
+      <pubDate>Mon, 22 Aug 2022 10:49:03 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/posts/react/two-way-binding/</guid>
+      <description>Two-way binding trong React?</description>
+    </item>
+    
     <item>
       <title>useState hook</title>
       <link>https://leaimy.github.io/posts/react/usestate-hook/</link>
