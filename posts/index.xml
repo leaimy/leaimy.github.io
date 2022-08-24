@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Wed, 24 Aug 2022 10:44:08 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Aug 2022 13:51:53 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>useCallback hook</title>
+      <link>https://leaimy.github.io/posts/react/use-callback/</link>
+      <pubDate>Wed, 24 Aug 2022 13:51:53 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/posts/react/use-callback/</guid>
+      <description>Tìm hiểu useCallback hook</description>
+    </item>
+    
     <item>
       <title>React.memo HOC</title>
       <link>https://leaimy.github.io/posts/react/react-memo/</link>
