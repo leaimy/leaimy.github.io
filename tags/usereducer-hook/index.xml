@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>useReducer Hook on Blog Nguyễn Thị Hà</title>
+    <link>https://leaimy.github.io/tags/usereducer-hook/</link>
+    <description>Recent content in useReducer Hook on Blog Nguyễn Thị Hà</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Thu, 25 Aug 2022 10:25:50 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/usereducer-hook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>useReducer Hook</title>
+      <link>https://leaimy.github.io/posts/react/use-reducer/</link>
+      <pubDate>Thu, 25 Aug 2022 10:25:50 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/posts/react/use-reducer/</guid>
+      <description>Tìm hiểu useReducer</description>
+    </item>
+    
+  </channel>
+</rss>
