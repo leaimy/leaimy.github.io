@@ -39,7 +39,7 @@
 <meta itemprop="name" content="useContext Hook">
 <meta itemprop="description" content="Tìm hiểu useContex hook"><meta itemprop="datePublished" content="2022-08-29T08:41:18+07:00" />
 <meta itemprop="dateModified" content="2022-08-29T08:41:18+07:00" />
-<meta itemprop="wordCount" content="476">
+<meta itemprop="wordCount" content="496">
 <meta itemprop="keywords" content="useContext hook,Hook,React,Tự học React," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="useContext Hook"/>
 <meta name="twitter:description" content="Tìm hiểu useContex hook"/>
@@ -141,10 +141,13 @@
       
       
         <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
-        <span class="f6 mv4 dib tracked"> - 476 words </span>
+        <span class="f6 mv4 dib tracked"> - 496 words </span>
       
     </header>
-    <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="1-tổng-quan-usecontext-hook">1. Tổng quan useContext hook</h2>
+    <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><blockquote>
+<p>Đơn giản hoá việc truyền dữ liệu từ component cha xuống component con mà không cần sử dụng tới props</p>
+</blockquote>
+<h2 id="1-tổng-quan-usecontext-hook">1. Tổng quan useContext hook</h2>
 <ul>
 <li>React Context là một cách để quản lý trạng thái (state) toàn cục.</li>
 <li>React Context có thể được sử dụng cùng với <code>useState</code> Hook để chia sẻ trạng thái giữa các thành phần lồng vào nhau dễ dàng hơn so với một mình <code>useState</code>.</li>
@@ -211,7 +214,6 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ThemeContext</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createContext</span>();
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">theme</span>, <span style="color:#a6e22e">setTheme</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>(<span style="color:#e6db74">&#34;light&#34;</span>);
 </span></span><span style="display:flex;"><span>
@@ -220,12 +222,11 @@
 </span></span><span style="display:flex;"><span>  };
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ThemeContext.Provider</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">theme</span>}&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;20px&#34;</span> }}&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">toggleTheme</span>}&gt;<span style="color:#a6e22e">Toggle</span> <span style="color:#a6e22e">theme</span>&lt;/<span style="color:#f92672">button</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">Content</span>  /&gt;
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;20px&#34;</span> }}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">toggleTheme</span>}&gt;<span style="color:#a6e22e">Toggle</span> <span style="color:#a6e22e">theme</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">Content</span> /&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ThemeContext.Provider</span>&gt;
-</span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>  );
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
@@ -233,7 +234,7 @@
 </span></span></code></pre></div><p>File <em><code>Content.js</code></em></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Paragraph</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Paragraph&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Content</span> <span style="color:#f92672">=</span> () =&gt; {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">Paragraph</span>  /&gt;;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">Paragraph</span> /&gt;;
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Content</span>;
@@ -242,8 +243,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ThemeContext</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;../App.js&#34;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Paragraph</span> <span style="color:#f92672">=</span> () =&gt; {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useContext</span>(<span style="color:#a6e22e">ThemeContext</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useContext</span>(<span style="color:#a6e22e">ThemeContext</span>);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">theme</span>}&gt;
