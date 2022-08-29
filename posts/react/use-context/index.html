@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="vi-vn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>useContext Hook | Blog Nguyễn Thị Hà</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Tìm hiểu useContex hook">
+    <meta name="generator" content="Hugo 0.101.0" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="useContext Hook" />
+<meta property="og:description" content="Tìm hiểu useContex hook" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://leaimy.github.io/posts/react/use-context/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-29T08:41:18+07:00" />
+<meta property="article:modified_time" content="2022-08-29T08:41:18+07:00" />
+
+<meta itemprop="name" content="useContext Hook">
+<meta itemprop="description" content="Tìm hiểu useContex hook"><meta itemprop="datePublished" content="2022-08-29T08:41:18+07:00" />
+<meta itemprop="dateModified" content="2022-08-29T08:41:18+07:00" />
+<meta itemprop="wordCount" content="487">
+<meta itemprop="keywords" content="useContext hook,Hook,React,Tự học React," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="useContext Hook"/>
+<meta name="twitter:description" content="Tìm hiểu useContex hook"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Blog Nguyễn Thị Hà
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    <a href="https://github.com/LeAiMy" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">useContext Hook</h1>
+      
+      <p class="tracked">
+        By <strong>Nguyễn Thị Hà</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-08-29T08:41:18+07:00">August 29, 2022</time>
+      
+
+      
+      
+        <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 487 words </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy helvetica f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="1-tổng-quan-usecontext-hook">1. Tổng quan useContext hook</h2>
+<ul>
+<li>React Context là một cách để quản lý trạng thái (state) toàn cục.</li>
+<li>React Context có thể được sử dụng cùng với <code>useState</code> Hook để chia sẻ trạng thái giữa các thành phần lồng vào nhau dễ dàng hơn so với một mình <code>useState</code>.</li>
+</ul>
+<h2 id="2-ví-dụ-minh-hoạ-usecontext-hook">2. Ví dụ minh hoạ useContext hook</h2>
+<ul>
+<li>Trạng thái nên được giữ bởi thành phần cha cao nhất trong ngăn xếp yêu cầu quyền truy cập vào trạng thái.</li>
+<li>Để minh hoạ chúng ta có nhiều thành phần lồng nhau. Thành phần ở trên cùng hoặc dưới cùng của ngăn xếp cần có quyền truy cập vào trạng thái.</li>
+</ul>
+<blockquote>
+<p>Khi chưa sử dụng React Context: Chuyển <code>props</code> qua các <code>component</code> lồng nhau</p>
+</blockquote>
+<p>File <em><code>App.js</code></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Content</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Context/Content&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;./App.css&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">theme</span>, <span style="color:#a6e22e">setTheme</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>(<span style="color:#e6db74">&#34;light&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">toggleTheme</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">setTheme</span>(<span style="color:#a6e22e">theme</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;dark&#34;</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;light&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dark&#34;</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;20px&#34;</span> }}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">toggleTheme</span>}&gt;<span style="color:#a6e22e">Toggle</span> <span style="color:#a6e22e">theme</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">Content</span> <span style="color:#a6e22e">theme</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">theme</span>} /&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+</span></span></code></pre></div><p>File <em><code>Content.js</code></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Paragraph</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Paragraph&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Content</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">theme</span> }) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">Paragraph</span> <span style="color:#a6e22e">theme</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">theme</span>} /&gt;;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Content</span>;
+</span></span></code></pre></div><p>File <em><code>Paragraph.js</code></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Paragraph</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">theme</span> }) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">theme</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">theme</span>}&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">Lorem</span> <span style="color:#a6e22e">ipsum</span> <span style="color:#a6e22e">dolor</span> <span style="color:#a6e22e">sit</span> <span style="color:#a6e22e">amet</span>, <span style="color:#a6e22e">consectetur</span> <span style="color:#a6e22e">adipiscing</span> <span style="color:#a6e22e">elit</span>, <span style="color:#a6e22e">sed</span> <span style="color:#66d9ef">do</span> <span style="color:#a6e22e">eiusmod</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">tempor</span> <span style="color:#a6e22e">incididunt</span> <span style="color:#a6e22e">ut</span> <span style="color:#a6e22e">labore</span> <span style="color:#a6e22e">et</span> <span style="color:#a6e22e">dolore</span> <span style="color:#a6e22e">magna</span> <span style="color:#a6e22e">aliqua</span>. <span style="color:#a6e22e">Ut</span> <span style="color:#a6e22e">enim</span> <span style="color:#a6e22e">ad</span> <span style="color:#a6e22e">minim</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">veniam</span>, <span style="color:#a6e22e">quis</span> <span style="color:#a6e22e">nostrud</span> <span style="color:#a6e22e">exercitation</span> <span style="color:#a6e22e">ullamco</span> <span style="color:#a6e22e">laboris</span> <span style="color:#a6e22e">nisi</span> <span style="color:#a6e22e">ut</span> <span style="color:#a6e22e">aliquip</span> <span style="color:#a6e22e">ex</span> <span style="color:#a6e22e">ea</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">commodo</span> <span style="color:#a6e22e">consequat</span>. <span style="color:#a6e22e">Duis</span> <span style="color:#a6e22e">aute</span> <span style="color:#a6e22e">irure</span> <span style="color:#a6e22e">dolor</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">reprehenderit</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">voluptate</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">velit</span> <span style="color:#a6e22e">esse</span> <span style="color:#a6e22e">cillum</span> <span style="color:#a6e22e">dolore</span> <span style="color:#a6e22e">eu</span> <span style="color:#a6e22e">fugiat</span> <span style="color:#a6e22e">nulla</span> <span style="color:#a6e22e">pariatur</span>. <span style="color:#a6e22e">Excepteur</span> <span style="color:#a6e22e">sint</span> <span style="color:#a6e22e">occaecat</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">cupidatat</span> <span style="color:#a6e22e">non</span> <span style="color:#a6e22e">proident</span>, <span style="color:#a6e22e">sunt</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">culpa</span> <span style="color:#a6e22e">qui</span> <span style="color:#a6e22e">officia</span> <span style="color:#a6e22e">deserunt</span> <span style="color:#a6e22e">mollit</span> <span style="color:#a6e22e">anim</span> <span style="color:#a6e22e">id</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">est</span> <span style="color:#a6e22e">laborum</span>.
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Paragraph</span>;
+</span></span></code></pre></div><blockquote>
+<p>Khi sử dụng Context</p>
+</blockquote>
+<ul>
+<li>Để tạo context, bạn phải import <code>createContext</code> và khởi tạo nó:</li>
+</ul>
+<p>File <em><code>App.js</code></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useState</span>, <span style="color:#a6e22e">createContext</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Content</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Context/Content&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;./App.css&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ThemeContext</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createContext</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">theme</span>, <span style="color:#a6e22e">setTheme</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>(<span style="color:#e6db74">&#34;light&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">toggleTheme</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">setTheme</span>(<span style="color:#a6e22e">theme</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;dark&#34;</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;light&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dark&#34;</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ThemeContext.Provider</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">theme</span>}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;20px&#34;</span> }}&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">toggleTheme</span>}&gt;<span style="color:#a6e22e">Toggle</span> <span style="color:#a6e22e">theme</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">Content</span>  /&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ThemeContext.Provider</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+</span></span></code></pre></div><p>File <em><code>Content.js</code></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Paragraph</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Paragraph&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Content</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">Paragraph</span>  /&gt;;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Content</span>;
+</span></span></code></pre></div><p>File <em><code>Paragraph.js</code></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useContext</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ThemeContext</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;../App.js&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Paragraph</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useContext</span>(<span style="color:#a6e22e">ThemeContext</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">theme</span>}&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">Lorem</span> <span style="color:#a6e22e">ipsum</span> <span style="color:#a6e22e">dolor</span> <span style="color:#a6e22e">sit</span> <span style="color:#a6e22e">amet</span>, <span style="color:#a6e22e">consectetur</span> <span style="color:#a6e22e">adipiscing</span> <span style="color:#a6e22e">elit</span>, <span style="color:#a6e22e">sed</span> <span style="color:#66d9ef">do</span> <span style="color:#a6e22e">eiusmod</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">tempor</span> <span style="color:#a6e22e">incididunt</span> <span style="color:#a6e22e">ut</span> <span style="color:#a6e22e">labore</span> <span style="color:#a6e22e">et</span> <span style="color:#a6e22e">dolore</span> <span style="color:#a6e22e">magna</span> <span style="color:#a6e22e">aliqua</span>. <span style="color:#a6e22e">Ut</span> <span style="color:#a6e22e">enim</span> <span style="color:#a6e22e">ad</span> <span style="color:#a6e22e">minim</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">veniam</span>, <span style="color:#a6e22e">quis</span> <span style="color:#a6e22e">nostrud</span> <span style="color:#a6e22e">exercitation</span> <span style="color:#a6e22e">ullamco</span> <span style="color:#a6e22e">laboris</span> <span style="color:#a6e22e">nisi</span> <span style="color:#a6e22e">ut</span> <span style="color:#a6e22e">aliquip</span> <span style="color:#a6e22e">ex</span> <span style="color:#a6e22e">ea</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">commodo</span> <span style="color:#a6e22e">consequat</span>. <span style="color:#a6e22e">Duis</span> <span style="color:#a6e22e">aute</span> <span style="color:#a6e22e">irure</span> <span style="color:#a6e22e">dolor</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">reprehenderit</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">voluptate</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">velit</span> <span style="color:#a6e22e">esse</span> <span style="color:#a6e22e">cillum</span> <span style="color:#a6e22e">dolore</span> <span style="color:#a6e22e">eu</span> <span style="color:#a6e22e">fugiat</span> <span style="color:#a6e22e">nulla</span> <span style="color:#a6e22e">pariatur</span>. <span style="color:#a6e22e">Excepteur</span> <span style="color:#a6e22e">sint</span> <span style="color:#a6e22e">occaecat</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">cupidatat</span> <span style="color:#a6e22e">non</span> <span style="color:#a6e22e">proident</span>, <span style="color:#a6e22e">sunt</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">culpa</span> <span style="color:#a6e22e">qui</span> <span style="color:#a6e22e">officia</span> <span style="color:#a6e22e">deserunt</span> <span style="color:#a6e22e">mollit</span> <span style="color:#a6e22e">anim</span> <span style="color:#a6e22e">id</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">est</span> <span style="color:#a6e22e">laborum</span>.
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Paragraph</span>;
+</span></span></code></pre></div><ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/usecontext-hook" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">useContext hook</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/hook" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Hook</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/react" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">React</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/t%E1%BB%B1-h%E1%BB%8Dc-react" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Tự học React</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/react/use-reducer/">useReducer Hook</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/use-memo/">useMemo hook</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/use-callback/">useCallback hook</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/react-memo/">React.memo HOC</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/use-ref/">useRef hook</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/use-effect-hook/">useEffect Hook</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/two-way-binding/">Two-way Binding</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/usestate-hook/">useState hook</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/create-project-react-webpack/">Tạo dự án với React &#43; Webpack</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/caidatnodejs/">NodeJS</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/props/">Props</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/react-element-types/">React Element Types</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/jsx/">Tổng quan JSX</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/react-create-element/">Tạo phần tử trong React</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/react/add-react/">Thêm React &amp; React-DOM vào Website</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://leaimy.github.io/" >
+    &copy;  Blog Nguyễn Thị Hà 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/LeAiMy" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Blog Nguyễn Thị Hà</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Thu, 25 Aug 2022 10:25:50 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Aug 2022 08:41:18 +0700</lastBuildDate><atom:link href="https://leaimy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hook</title>
       <link>https://leaimy.github.io/tags/hook/</link>
-      <pubDate>Thu, 25 Aug 2022 10:25:50 +0700</pubDate>
+      <pubDate>Mon, 29 Aug 2022 08:41:18 +0700</pubDate>
       
       <guid>https://leaimy.github.io/tags/hook/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>React</title>
       <link>https://leaimy.github.io/tags/react/</link>
-      <pubDate>Thu, 25 Aug 2022 10:25:50 +0700</pubDate>
+      <pubDate>Mon, 29 Aug 2022 08:41:18 +0700</pubDate>
       
       <guid>https://leaimy.github.io/tags/react/</guid>
       <description></description>
@@ -28,9 +28,18 @@
     <item>
       <title>Tự học React</title>
       <link>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</link>
-      <pubDate>Thu, 25 Aug 2022 10:25:50 +0700</pubDate>
+      <pubDate>Mon, 29 Aug 2022 08:41:18 +0700</pubDate>
       
       <guid>https://leaimy.github.io/tags/t%E1%BB%B1-h%E1%BB%8Dc-react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>useContext hook</title>
+      <link>https://leaimy.github.io/tags/usecontext-hook/</link>
+      <pubDate>Mon, 29 Aug 2022 08:41:18 +0700</pubDate>
+      
+      <guid>https://leaimy.github.io/tags/usecontext-hook/</guid>
       <description></description>
     </item>
     
